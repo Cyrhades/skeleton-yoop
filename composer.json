@@ -25,10 +25,13 @@
                 }
             }
         }
-    ],
+    ],    
     "scripts": {
         "post-install-cmd": [
-            "php -r \"copy('app/config.php.example', 'app/config.php');\""
+            "php -r \"if(!file_exists('app/config.php'))copy('app/config.php.example', 'app/config.php');\""
+        ],
+        "post-update-cmd": [
+            "php -r \"if(!file_exists('app/config.php'))copy('app/config.php.example', 'app/config.php');\""
         ]
     },
     "require": {
