@@ -1,24 +1,12 @@
 {% extends 'web/layout.html.twig' %}
 
-{% block title %}{{ parent() }} : Page d'accueil{% endblock %}
-
-
 {% block content %}
 <div class="container">
-    {% for article in articles %}
-    <article>
-        <h2>{{ article.title }} <small> le {{ article.datetime|date("d/m/Y") }}</small></h2>
-        {% if article.image != '' %}
-        <p>
-            <img src="{{ article.image }}" />
-        </p>
-        {% endif %}
-        <p>
-            {{ article.catchPhrase }}
-            <br>
-            <a href="article/{{ article.id }}">Lire l'article</a>
-        </p>
-    </article>
-    {% endfor %}
+   <p>
+       Bienvenue sur Yoop !
+       <div>
+           Créez votre Application Web en un temps presque record ^^
+       </div>
+   </p>
 </div>
 {% endblock %}
