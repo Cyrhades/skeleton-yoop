@@ -27,7 +27,9 @@
         }
     ],
     "scripts": {
-       
+        "post-install-cmd": [
+            "php -r \"copy('app/config.php.example', 'app/config.php');\""
+        ]
     },
     "require": {
         "cyrhades/yoop": "^1.3",
