@@ -11,7 +11,8 @@ while(true) {
     echo "yoop> ";
     $request = explode(' ', trim(fgets($fp)));
     if($request[0] == 'quit') break;
-    call_user_func_array([$console, 'execute'],$request);
+
+    echo call_user_func_array([$console, 'execute'], $request);
     echo "\n";
 }
 echo 'A bientôt sur Yoop !';
