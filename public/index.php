@@ -4,6 +4,7 @@ require '../vendor/autoload.php';
 
 $kernel = new Yoop\Kernel();
 
+(new Yoop\Database\Wait)->tryMySQL();
 
 $router = $kernel->getRouter();
 $router->load('/app/routes.php');
