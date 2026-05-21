@@ -7,6 +7,15 @@ session_set_cookie_params(60*60, null, null, false, true);
 require '../vendor/autoload.php';
 
 $kernel = new Yoop\Kernel();
+
+/* Exemple utilisation CSP
+$csp = $kernel->contentSecurityPolicy();
+$csp->addScriptSrc([ 'https://unpkg.com', 'https://cdnjs.cloudflare.com' ]);
+$csp->addStyleSrc([ 'https://fonts.googleapis.com' ]);
+$csp->addFontSrc([ 'https://fonts.gstatic.com' ]);
+$csp->addConnectSrc([ 'https://unpkg.com', 'https://fonts.gstatic.com' ]);
+*/
+
 (new Yoop\Database\Wait)->tryMySQL();
 
 function __(string $trad, array $p=[]) { global $kernel; return $kernel->__($trad, $p); }
