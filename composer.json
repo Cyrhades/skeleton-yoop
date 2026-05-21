@@ -9,26 +9,14 @@
             "App\\" : "src/"     
         }
     },
-    "repositories":[
+    "repositories": [
         {
-            "type": "package",
-            "package": {
-                "name": "cyrhades/yoop",
-                "version" : "master",
-                "source": {
-                    "url": "https://github.com/Cyrhades/yoop.git",
-                    "type": "git",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "psr-4": { "Yoop\\": ["src/"] }
-                }
-            }
-      
+            "type": "vcs",
+            "url": "https://github.com/Cyrhades/yoop.git"
         }
     ],
     "require": {
-        "cyrhades/yoop": "master",
+        "cyrhades/yoop": "dev-master",
         "twig/twig": "^3.0",
         "nikic/fast-route": "^1.3" 
     },
